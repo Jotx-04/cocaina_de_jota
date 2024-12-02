@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { CreateProductCommand } from '../../application/commands/create-product.command';
+import { DeleteProductCommand } from '../../application/commands/delete-product.command';
+import { UpdateProductCommand } from '../../application/commands/update-product.command';
 
 
 @NgModule({
@@ -14,6 +17,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [CreateProductCommand, DeleteProductCommand, UpdateProductCommand]
 })
 export class HomePageModule {}
